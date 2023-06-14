@@ -1,0 +1,12 @@
+<h1>List of restaurants :</h1>
+<ul class="list-group">
+  <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item"><%= restaurant.name%> <%=restaurant.address%> <%= restaurant.phone_number%> <%=restaurant.category %></li>
+  <% end %>
+  <%= link_to new_restaurant_review_path do %>
+  <i class="fa-solid fa-plus"></i> Create a new review
+  <% end %>
+   <%= link_to new_restaurant_path do %>
+    <i class="fa-solid fa-plus"></i> Add a new restaurant
+  <% end %>
+</div>
